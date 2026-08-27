@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社區韌性專題與實務研析｜CR-115</title>
+<meta name="description" content="國立臺北護理健康大學 健康科技學院碩士班 · 社區韌性專題與實務研析 · 115學年度第1學期">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#efe9dc;
+    --panel:#fbf8f1;
+    --panel-2:#f4efe2;
+    --line:#d8cfba;
+    --text:#2b2620;
+    --text-dim:#6b6152;
+    --crimson:#b23a2e;
+    --crimson-tint:#f3dad4;
+    --olive:#7d7350;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:'Noto Sans TC', sans-serif;line-height:1.7;
+    background-image:
+      linear-gradient(var(--bg) 0%, var(--bg) 100%);
+  }
+  a{color:inherit;}
+  .mono{font-family:'Courier Prime', monospace;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:'Noto Serif TC', serif;font-weight:900;margin:0;color:var(--text);}
+  .stamp-font{font-family:'Special Elite', cursive;}
+
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(239,233,220,.92);backdrop-filter:blur(6px);border-bottom:2px solid var(--text);}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand .mark{font-family:'Courier Prime';font-weight:700;font-size:12.5px;color:var(--panel);background:var(--crimson);padding:3px 8px;letter-spacing:.05em;transform:rotate(-1deg);}
+  .brand .name{font-weight:700;font-size:15px;}
+  .nav{display:flex;gap:24px;font-size:14px;}
+  .nav a{text-decoration:none;color:var(--text-dim);}
+  .nav a:hover{color:var(--crimson);}
+
+  .hero{padding:80px 0 56px;border-bottom:2px solid var(--text);position:relative;}
+  .eyebrow{font-family:'Courier Prime';font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);}
+  .hero h1{font-size:clamp(28px,4.6vw,44px);letter-spacing:.01em;margin-top:14px;}
+  .hero .en{font-family:'Courier Prime';color:var(--text-dim);font-size:14.5px;margin-top:10px;}
+  .hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}
+  .tag-chip{font-family:'Courier Prime';font-size:12.5px;border:1.5px solid var(--text);background:var(--panel);padding:7px 13px;}
+  .tag-chip b{color:var(--crimson);}
+  .hero-desc{margin-top:26px;max-width:640px;color:var(--text-dim);font-size:15.5px;}
+
+  section{padding:60px 0;border-bottom:1px solid var(--line);}
+  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:30px;}
+  .section-head .idx{font-family:'Courier Prime';color:var(--crimson);font-size:13px;}
+  .section-head h2{font-size:22px;}
+
+  /* attendance gauge */
+  .gauge-card{border:2px solid var(--text);background:var(--panel);padding:22px 26px;position:relative;}
+  .gauge-card::before{
+    content:"依《救護技術員管理辦法》";
+    position:absolute;top:-11px;left:20px;background:var(--bg);padding:0 8px;
+    font-family:'Courier Prime';font-size:11px;color:var(--text-dim);
+  }
+  .gauge-row{display:flex;align-items:center;gap:18px;margin-top:8px;}
+  .gauge-track{flex:1;height:22px;background:var(--panel-2);border:1.5px solid var(--text);position:relative;}
+  .gauge-fill{height:100%;background:repeating-linear-gradient(45deg,var(--crimson-tint),var(--crimson-tint) 6px,var(--crimson) 6px,var(--crimson) 7px);width:10%;border-right:2px solid var(--crimson);}
+  .gauge-note{font-family:'Courier Prime';font-size:12.5px;color:var(--text-dim);margin-top:10px;}
+
+  /* duty log table */
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:22px;font-size:12.5px;color:var(--text-dim);font-family:'Courier Prime';}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .dot{width:9px;height:9px;display:inline-block;border:1.5px solid var(--text);}
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  thead th{
+    text-align:left;font-family:'Courier Prime';font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--panel);background:var(--text);padding:10px 12px;
+  }
+  tbody td{padding:13px 12px;border-bottom:1px dashed var(--line);vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--panel);}
+  tbody tr:nth-child(odd){background:var(--panel-2);}
+  tbody tr.flagged{background:var(--crimson-tint);}
+  .wk{font-family:'Courier Prime';color:var(--crimson);font-weight:700;}
+  .dt{font-family:'Courier Prime';color:var(--text-dim);white-space:nowrap;}
+  .stampbadge{
+    display:inline-block;font-family:'Special Elite';font-size:11px;color:var(--crimson);
+    border:2px solid var(--crimson);padding:2px 9px;transform:rotate(-3deg);letter-spacing:.03em;
+  }
+  .plainbadge{font-family:'Courier Prime';font-size:11px;color:var(--text-dim);}
+
+  /* grading */
+  .grade-bars{display:flex;flex-direction:column;gap:16px;}
+  .gbar-row{display:flex;align-items:center;gap:16px;}
+  .gbar-label{width:170px;flex:0 0 auto;font-size:14px;}
+  .gbar-track{flex:1;height:12px;background:var(--panel-2);border:1px solid var(--text);}
+  .gbar-fill{height:100%;background:var(--crimson);}
+  .gbar-pct{width:44px;text-align:right;font-family:'Courier Prime';color:var(--crimson);font-size:14px;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+  .card{border:1.5px solid var(--text);background:var(--panel);padding:20px 22px;}
+  .card h3{font-size:14.5px;margin-bottom:10px;color:var(--crimson);font-family:'Courier Prime';font-weight:700;letter-spacing:.02em;}
+  .card p, .card li{color:var(--text-dim);font-size:14px;}
+  .card ul{margin:0;padding-left:18px;}
+
+  .ann{border:1.5px dashed var(--line);padding:16px 18px;margin-bottom:12px;background:var(--panel);}
+  .ann .d{font-family:'Courier Prime';font-size:11.5px;color:var(--text-dim);margin-bottom:6px;}
+  .ann h4{margin:0 0 6px;font-size:15px;font-weight:700;}
+  .ann p{margin:0;color:var(--text-dim);font-size:14px;}
+
+  footer{padding:36px 0;text-align:center;}
+  .fine{font-family:'Courier Prime';font-size:11px;color:var(--text-dim);}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><span class="mark">CR-115</span><span class="name">社區韌性專題與實務研析</span></div>
+    <nav class="nav">
+      <a href="#schedule">教學進度</a>
+      <a href="#attendance">出勤追蹤</a>
+      <a href="#ann">公告</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">National Taipei University of Nursing and Health Sciences · College of Health Technology</p>
+    <h1>社區韌性專題與實務研析</h1>
+    <p class="en mono">Analysis and Practice of Community Resilience · 115學年度第1學期</p>
+    <div class="hero-meta">
+      <span class="tag-chip">學分 <b>3</b></span>
+      <span class="tag-chip">週三 <b>2–4節</b></span>
+      <span class="tag-chip">開課 <b>健康科技學院碩士班</b></span>
+      <span class="tag-chip">授課 <b>張育通 助理教授</b></span>
+    </div>
+    <p class="hero-desc">本課程探討社區韌性體系中「第一反應者」的關鍵角色與實務職能，結合緊急醫療應變科學與社區公共衛生架構，深入研析基本救命術、創傷生理學及大量傷病處置邏輯。</p>
+  </div>
+</section>
+
+<section id="attendance">
+  <div class="wrap">
+    <div class="section-head"><span class="idx mono">01</span><h2>EMT-1 核心課程出勤時數</h2></div>
+    <div class="gauge-card">
+      <div class="gauge-row">
+        <div class="gauge-track"><div class="gauge-fill"></div></div>
+      </div>
+      <p class="gauge-note">涉及 EMT-1 核心課程之週次，缺課時數不得超過總時數之 1/10。全學期規劃 54 小時（3小時 × 18週），可容許缺課上限約 5.4 小時。未達標者將無法參加期末術科檢定，亦無法取得受訓證明。</p>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="section-head"><span class="idx mono">02</span><h2>教學進度 · DUTY LOG</h2></div>
+
+    <div class="legend">
+      <span><i class="dot" style="background:var(--panel-2)"></i>一般講授/討論</span>
+      <span><i class="dot" style="background:var(--crimson-tint)"></i>與出差期間重疊，待確認處理方式</span>
+    </div>
+
+    <table id="scheduleTable">
+      <thead>
+        <tr><th style="width:52px;">週次</th><th style="width:90px;">日期</th><th>課程單元／進度</th><th style="width:70px;">時數</th><th style="width:170px;">備註</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="idx mono">03</span><h2>成績評定</h2></div>
+    <div class="grade-bars">
+      <div class="gbar-row"><div class="gbar-label">平時表現</div><div class="gbar-track"><div class="gbar-fill" style="width:20%"></div></div><div class="gbar-pct">20%</div></div>
+      <div class="gbar-row"><div class="gbar-label">期中報告</div><div class="gbar-track"><div class="gbar-fill" style="width:30%"></div></div><div class="gbar-pct">30%</div></div>
+      <div class="gbar-row"><div class="gbar-label">期末評量（筆試+術科）</div><div class="gbar-track"><div class="gbar-fill" style="width:50%"></div></div><div class="gbar-pct">50%</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><span class="idx mono">04</span><h2>課程資訊</h2></div>
+    <div class="grid2">
+      <div class="card">
+        <h3>專業紀律與安全</h3>
+        <p>實務操作週次（CPR、創傷固定、搬運）須穿著便於活動之長褲與運動鞋，嚴禁於操作區嬉鬧，違反安全規範經勸導不改者，該次成績以零分計。</p>
+      </div>
+      <div class="card">
+        <h3>修課建議</h3>
+        <p>本課程實務比重極高，建議修課同學抱持「專業紀律」與「團隊協作」之態度，適合對緊急醫療、社區防救災實務有熱忱的同學選修。</p>
+      </div>
+      <div class="card">
+        <h3>參考資料</h3>
+        <ul>
+          <li>內政部消防署 (2024)。《初級救護技術員（EMT-1）訓練教材》。最新版。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>諮詢時間</h3>
+        <p>Office Hour 採預約制，請事先與授課老師聯繫。授課地點依教務處公告。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ann" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head"><span class="idx mono">05</span><h2>公告</h2></div>
+    <div id="announcements"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fine">國立臺北護理健康大學 · 健康科技學院碩士班 · 115學年度第1學期 · CR-115 / DUTY LOG v1</span>
+  </div>
+</footer>
+
+<script>
+const SCHEDULE = [
+  {w:1,  d:'9/9',   t:'緊急應變治理與政策分析', h:3, flag:false},
+  {w:2,  d:'9/16',  t:'災難與急救醫療法專題', h:3, flag:false},
+  {w:3,  d:'9/23',  t:'臨床評估邏輯與生理數據解讀', h:3, flag:false},
+  {w:4,  d:'9/30',  t:'生理監測與診斷決策科學', h:3, flag:false},
+  {w:5,  d:'10/7',  t:'呼吸支持技術與氣道防護研究', h:3, flag:false},
+  {w:6,  d:'10/14', t:'心血管介入與猝死預防科學', h:3, flag:false},
+  {w:7,  d:'10/21', t:'災難與創傷病理生理學研析', h:3, flag:false},
+  {w:8,  d:'10/28', t:'運動生物力學：脊椎與骨骼固定', h:3, flag:false},
+  {w:9,  d:'11/4',  t:'期中報告', h:3, flag:false, note:'報告'},
+  {w:10, d:'11/11', t:'災難時內科急性病患鑑別診斷', h:3, flag:true, note:'⚠ 待確認：教師人在新加坡（EMS ASIA, 11/9–11/12）'},
+  {w:11, d:'11/18', t:'環境毒理學與毒物反應處置', h:3, flag:false},
+  {w:12, d:'11/25', t:'災難現場資源配置與管理模型', h:3, flag:false},
+  {w:13, d:'12/2',  t:'安全衛生議題研析', h:3, flag:false},
+  {w:14, d:'12/9',  t:'特殊族群照護與健康不平等研討', h:3, flag:false},
+  {w:15, d:'12/16', t:'數位轉型：急救科技之應用創新', h:3, flag:false},
+  {w:16, d:'12/23', t:'場域模擬：複雜情境行為分析 I', h:3, flag:false},
+  {w:17, d:'12/30', t:'場域模擬：複雜情境行為分析 II', h:3, flag:false},
+  {w:18, d:'1/6',   t:'期末評量', h:3, flag:false, note:'考試'},
+];
+
+const DEMO_ANN = [
+  {date:'2026-09-01', title:'課程網站上線', body:'本學期課程資訊、進度公告與出勤紀錄將統一透過本站發布，請定期查看。'},
+];
+
+function renderTable(){
+  const tbody = document.querySelector('#scheduleTable tbody');
+  SCHEDULE.forEach(row=>{
+    const tr = document.createElement('tr');
+    if(row.flag) tr.classList.add('flagged');
+    const badge = row.flag
+      ? `<span class="stampbadge">${row.note}</span>`
+      : `<span class="plainbadge">${row.note || '講授/討論'}</span>`;
+    tr.innerHTML = `<td class="wk">${String(row.w).padStart(2,'0')}</td>
+      <td class="dt">${row.d}</td>
+      <td>${row.t}</td>
+      <td class="mono">${row.h}</td>
+      <td>${badge}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderAnn(){
+  const wrap = document.getElementById('announcements');
+  DEMO_ANN.forEach(a=>{
+    const div = document.createElement('div');
+    div.className = 'ann';
+    div.innerHTML = `<div class="d">${a.date}</div><h4>${a.title}</h4><p>${a.body}</p>`;
+    wrap.appendChild(div);
+  });
+}
+
+renderTable();
+renderAnn();
+</script>
+</body>
+</html>
