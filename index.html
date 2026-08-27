@@ -3,280 +3,464 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>社區韌性專題與實務研析｜CR-115</title>
-<meta name="description" content="國立臺北護理健康大學 健康科技學院碩士班 · 社區韌性專題與實務研析 · 115學年度第1學期">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0f2942">
+<title>高階專業人員 EMT-1 × 社區韌性｜115-1</title>
+<meta name="description" content="國立臺北護理健康大學健康科技學院碩士班｜社區韌性專題與實務研析｜EMT-1 核心能力整合課程導航">
 <style>
   :root{
-    --bg:#efe9dc;
-    --panel:#fbf8f1;
-    --panel-2:#f4efe2;
-    --line:#d8cfba;
-    --text:#2b2620;
-    --text-dim:#6b6152;
-    --crimson:#b23a2e;
-    --crimson-tint:#f3dad4;
-    --olive:#7d7350;
+    --navy:#0f2942;
+    --navy-2:#163d5c;
+    --blue:#246a92;
+    --teal:#138a8a;
+    --red:#b6423b;
+    --amber:#a76713;
+    --green:#2f7a58;
+    --ink:#17222d;
+    --muted:#5a6875;
+    --bg:#eef3f6;
+    --paper:#ffffff;
+    --soft:#f6f9fb;
+    --line:#d5e0e7;
+    --shadow:0 14px 36px rgba(15,41,66,.10);
+    --radius:20px;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{
-    margin:0;background:var(--bg);color:var(--text);
-    font-family:'Noto Sans TC', sans-serif;line-height:1.7;
-    background-image:
-      linear-gradient(var(--bg) 0%, var(--bg) 100%);
+    margin:0;
+    color:var(--ink);
+    background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    font-size:18px;
+    line-height:1.75;
   }
-  a{color:inherit;}
-  .mono{font-family:'Courier Prime', monospace;}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
-  h1,h2,h3{font-family:'Noto Serif TC', serif;font-weight:900;margin:0;color:var(--text);}
-  .stamp-font{font-family:'Special Elite', cursive;}
-
-  .topbar{position:sticky;top:0;z-index:50;background:rgba(239,233,220,.92);backdrop-filter:blur(6px);border-bottom:2px solid var(--text);}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;}
-  .brand{display:flex;align-items:center;gap:10px;}
-  .brand .mark{font-family:'Courier Prime';font-weight:700;font-size:12.5px;color:var(--panel);background:var(--crimson);padding:3px 8px;letter-spacing:.05em;transform:rotate(-1deg);}
-  .brand .name{font-weight:700;font-size:15px;}
-  .nav{display:flex;gap:24px;font-size:14px;}
-  .nav a{text-decoration:none;color:var(--text-dim);}
-  .nav a:hover{color:var(--crimson);}
-
-  .hero{padding:80px 0 56px;border-bottom:2px solid var(--text);position:relative;}
-  .eyebrow{font-family:'Courier Prime';font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);}
-  .hero h1{font-size:clamp(28px,4.6vw,44px);letter-spacing:.01em;margin-top:14px;}
-  .hero .en{font-family:'Courier Prime';color:var(--text-dim);font-size:14.5px;margin-top:10px;}
-  .hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}
-  .tag-chip{font-family:'Courier Prime';font-size:12.5px;border:1.5px solid var(--text);background:var(--panel);padding:7px 13px;}
-  .tag-chip b{color:var(--crimson);}
-  .hero-desc{margin-top:26px;max-width:640px;color:var(--text-dim);font-size:15.5px;}
-
-  section{padding:60px 0;border-bottom:1px solid var(--line);}
-  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:30px;}
-  .section-head .idx{font-family:'Courier Prime';color:var(--crimson);font-size:13px;}
-  .section-head h2{font-size:22px;}
-
-  /* attendance gauge */
-  .gauge-card{border:2px solid var(--text);background:var(--panel);padding:22px 26px;position:relative;}
-  .gauge-card::before{
-    content:"依《救護技術員管理辦法》";
-    position:absolute;top:-11px;left:20px;background:var(--bg);padding:0 8px;
-    font-family:'Courier Prime';font-size:11px;color:var(--text-dim);
+  a{color:inherit}
+  button{font:inherit}
+  .wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,41,66,.96);color:#fff;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
   }
-  .gauge-row{display:flex;align-items:center;gap:18px;margin-top:8px;}
-  .gauge-track{flex:1;height:22px;background:var(--panel-2);border:1.5px solid var(--text);position:relative;}
-  .gauge-fill{height:100%;background:repeating-linear-gradient(45deg,var(--crimson-tint),var(--crimson-tint) 6px,var(--crimson) 6px,var(--crimson) 7px);width:10%;border-right:2px solid var(--crimson);}
-  .gauge-note{font-family:'Courier Prime';font-size:12.5px;color:var(--text-dim);margin-top:10px;}
+  .topbar .wrap{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#fff;color:var(--navy);font-weight:900;font-size:15px;flex:0 0 auto}
+  .brand-text{font-weight:800;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nav{display:flex;gap:22px;font-size:15px;font-weight:700}
+  .nav a{text-decoration:none;color:#e7f0f5}
+  .nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:5px}
 
-  /* duty log table */
-  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:22px;font-size:12.5px;color:var(--text-dim);font-family:'Courier Prime';}
-  .legend span{display:inline-flex;align-items:center;gap:7px;}
-  .dot{width:9px;height:9px;display:inline-block;border:1.5px solid var(--text);}
-  table{width:100%;border-collapse:collapse;font-size:14px;}
-  thead th{
-    text-align:left;font-family:'Courier Prime';font-size:11px;letter-spacing:.05em;text-transform:uppercase;
-    color:var(--panel);background:var(--text);padding:10px 12px;
+  .hero{background:linear-gradient(135deg,var(--navy),#153b59 56%,#165f67);color:#fff;padding:74px 0 58px;overflow:hidden;position:relative}
+  .hero:after{content:"";position:absolute;right:-120px;top:-130px;width:390px;height:390px;border:70px solid rgba(255,255,255,.06);border-radius:50%}
+  .eyebrow{margin:0 0 12px;color:#bfe6ee;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .hero h1{font-size:clamp(38px,5.7vw,68px);line-height:1.12;margin:0;letter-spacing:-.03em;max-width:920px}
+  .hero .sub{font-size:clamp(20px,2.5vw,28px);font-weight:700;margin:14px 0 0;color:#eaf6f8}
+  .hero-desc{max-width:860px;font-size:19px;color:#dbeaf0;margin:24px 0 0}
+  .hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px;position:relative;z-index:1}
+  .stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:18px 20px}
+  .stat b{display:block;font-size:29px;line-height:1.15}
+  .stat span{font-size:14px;color:#d7e8ee}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;position:relative;z-index:2}
+  .btn{border:0;border-radius:13px;padding:12px 18px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+  .btn-primary{background:#fff;color:var(--navy)}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+
+  main section{padding:52px 0}
+  .section-title{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px}
+  .section-index{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px;flex:0 0 auto}
+  .section-title h2{font-size:clamp(28px,3vw,38px);line-height:1.25;margin:0}
+  .section-title p{margin:7px 0 0;color:var(--muted);font-size:17px}
+
+  .notice{background:#fff7e8;border:2px solid #e7b056;border-radius:18px;padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;box-shadow:0 8px 24px rgba(105,72,20,.06)}
+  .notice-num{font-size:32px;font-weight:950;color:var(--amber);line-height:1}
+  .notice h3{margin:0 0 5px;font-size:21px}
+  .notice p{margin:0;color:#725a33;font-size:17px}
+  .notice a{font-weight:800;color:#795000}
+
+  .core-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .core-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:220px}
+  .core-card .kicker{font-size:14px;font-weight:900;letter-spacing:.05em;color:var(--blue);text-transform:uppercase}
+  .core-card h3{font-size:23px;line-height:1.35;margin:8px 0 10px}
+  .core-card p{font-size:16px;color:var(--muted);margin:0 0 18px}
+  .core-card .links{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+  .link-btn{padding:9px 12px;border-radius:10px;background:#edf4f8;color:var(--navy);font-weight:800;font-size:15px;text-decoration:none;border:1px solid #d5e3eb}
+  .link-btn:hover{background:#e4eff5}
+
+  .progress-shell{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:20px;box-shadow:var(--shadow);position:sticky;top:82px;z-index:15}
+  .progress-top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:10px}
+  .progress-top b{font-size:20px}
+  .progress-top span{color:var(--muted);font-size:15px}
+  .track{height:16px;background:#e8eef2;border-radius:999px;overflow:hidden}
+  .fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),#2da5a1);transition:width .25s ease}
+  .progress-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:13px}
+  .mini-btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-size:14px;font-weight:800;cursor:pointer;color:var(--navy)}
+  .mini-btn:hover{background:#f2f7fa}
+  .local-note{font-size:13px;color:var(--muted);margin-left:auto}
+
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+  .filter{border:1px solid #bdccd6;background:#fff;border-radius:999px;padding:9px 14px;font-size:15px;font-weight:800;cursor:pointer;color:var(--navy)}
+  .filter.active{background:var(--navy);border-color:var(--navy);color:#fff}
+  .weeklist{display:flex;flex-direction:column;gap:13px}
+  .weekcard{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 18px rgba(15,41,66,.05)}
+  .weekcard.done{border-color:#8ec5a9;background:#f9fffb}
+  .weekhead{display:grid;grid-template-columns:72px 84px minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:19px 20px;cursor:pointer}
+  .weekhead:hover{background:#f8fbfd}
+  .wk{width:62px;height:56px;border-radius:14px;background:#eaf1f5;color:var(--navy);display:grid;place-items:center;font-size:18px;font-weight:950}
+  .date{font-size:16px;color:var(--muted);font-weight:800}
+  .wtitle{font-size:21px;font-weight:900;line-height:1.4;min-width:0}
+  .modules{display:block;font-size:14px;color:var(--blue);font-weight:800;margin-top:3px}
+  .done-btn{border:1px solid #b8c7d1;background:#fff;color:var(--navy);border-radius:11px;padding:9px 12px;font-size:14px;font-weight:900;cursor:pointer;white-space:nowrap}
+  .done .done-btn{background:#e7f5ed;border-color:#89b99f;color:#246548}
+  .caret{font-size:27px;font-weight:700;transform:rotate(0);transition:transform .2s;color:#718391}
+  .open .caret{transform:rotate(90deg)}
+  .weekbody{display:none;border-top:1px solid var(--line);padding:22px 20px 24px;background:#fbfdfe}
+  .open .weekbody{display:block}
+  .focus{margin:0 0 17px;padding:14px 16px;border-left:5px solid var(--teal);background:#eef8f7;border-radius:0 12px 12px 0;color:#2e5d5e;font-size:16px}
+  .resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .resource{border:1px solid var(--line);background:#fff;border-radius:14px;padding:15px 16px;display:flex;gap:12px;align-items:flex-start}
+  .r-ico{font-size:21px;line-height:1.2;flex:0 0 auto}
+  .resource a{font-weight:900;color:var(--navy);text-decoration:none;font-size:17px;line-height:1.45}
+  .resource a:hover{text-decoration:underline;text-underline-offset:3px}
+  .resource .meta{color:var(--muted);font-size:14px;margin-top:4px;line-height:1.55}
+  .pill{display:inline-block;margin-top:7px;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:900}
+  .pill.official{background:#e8f1f8;color:#245a80}
+  .pill.cpg{background:#e9f7f4;color:#1e746d}
+  .pill.video{background:#fff0ef;color:#9e403a}
+  .pill.advanced{background:#f5ecff;color:#76509b}
+  .disclaimer{margin:18px 0 0;color:var(--muted);font-size:14px}
+
+  .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .info-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+  .info-card h3{margin:0 0 10px;font-size:19px;color:var(--navy)}
+  .info-card p,.info-card li{font-size:16px;color:var(--muted)}
+  .info-card ul{margin:0;padding-left:21px}
+  .grade{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:15px}
+  .grade-item{background:var(--navy);color:#fff;border-radius:16px;padding:20px;text-align:center}
+  .grade-item b{display:block;font-size:34px;line-height:1.1}
+  .grade-item span{font-size:15px;color:#dcebf2}
+
+  .source-note{background:#eaf1f5;border-radius:16px;padding:20px;color:#445766;font-size:15px}
+  .source-note strong{color:var(--navy)}
+  footer{padding:32px 0 44px;color:#60717f;text-align:center;font-size:14px}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:repeat(2,1fr)}
+    .core-grid,.resource-grid{grid-template-columns:1fr}
+    .info-grid{grid-template-columns:1fr}
+    .weekhead{grid-template-columns:62px 1fr auto}
+    .date{grid-column:2;grid-row:2;margin-top:-10px}
+    .wtitle{grid-column:2;grid-row:1}
+    .done-btn{grid-column:3;grid-row:1 / span 2}
+    .caret{display:none}
   }
-  tbody td{padding:13px 12px;border-bottom:1px dashed var(--line);vertical-align:top;}
-  tbody tr:nth-child(even){background:var(--panel);}
-  tbody tr:nth-child(odd){background:var(--panel-2);}
-  tbody tr.flagged{background:var(--crimson-tint);}
-  .wk{font-family:'Courier Prime';color:var(--crimson);font-weight:700;}
-  .dt{font-family:'Courier Prime';color:var(--text-dim);white-space:nowrap;}
-  .stampbadge{
-    display:inline-block;font-family:'Special Elite';font-size:11px;color:var(--crimson);
-    border:2px solid var(--crimson);padding:2px 9px;transform:rotate(-3deg);letter-spacing:.03em;
+  @media(max-width:680px){
+    body{font-size:17px}
+    .wrap{width:min(100% - 24px,1180px)}
+    .topbar .wrap{min-height:62px}
+    .nav{display:none}
+    .brand-text{font-size:15px}
+    .hero{padding:54px 0 42px}
+    .hero-grid{grid-template-columns:1fr 1fr}
+    .stat{padding:15px}
+    .stat b{font-size:24px}
+    main section{padding:38px 0}
+    .notice{grid-template-columns:1fr;gap:10px}
+    .progress-shell{top:73px;padding:16px}
+    .local-note{width:100%;margin-left:0}
+    .weekhead{grid-template-columns:54px minmax(0,1fr);padding:16px;gap:11px}
+    .wk{width:50px;height:50px;font-size:16px}
+    .wtitle{font-size:19px}
+    .date{font-size:15px}
+    .done-btn{grid-column:1 / -1;grid-row:3;width:100%}
+    .resource a{font-size:16px}
+    .grade{grid-template-columns:1fr}
   }
-  .plainbadge{font-family:'Courier Prime';font-size:11px;color:var(--text-dim);}
-
-  /* grading */
-  .grade-bars{display:flex;flex-direction:column;gap:16px;}
-  .gbar-row{display:flex;align-items:center;gap:16px;}
-  .gbar-label{width:170px;flex:0 0 auto;font-size:14px;}
-  .gbar-track{flex:1;height:12px;background:var(--panel-2);border:1px solid var(--text);}
-  .gbar-fill{height:100%;background:var(--crimson);}
-  .gbar-pct{width:44px;text-align:right;font-family:'Courier Prime';color:var(--crimson);font-size:14px;}
-
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  @media (max-width:720px){.grid2{grid-template-columns:1fr;}}
-  .card{border:1.5px solid var(--text);background:var(--panel);padding:20px 22px;}
-  .card h3{font-size:14.5px;margin-bottom:10px;color:var(--crimson);font-family:'Courier Prime';font-weight:700;letter-spacing:.02em;}
-  .card p, .card li{color:var(--text-dim);font-size:14px;}
-  .card ul{margin:0;padding-left:18px;}
-
-  .ann{border:1.5px dashed var(--line);padding:16px 18px;margin-bottom:12px;background:var(--panel);}
-  .ann .d{font-family:'Courier Prime';font-size:11.5px;color:var(--text-dim);margin-bottom:6px;}
-  .ann h4{margin:0 0 6px;font-size:15px;font-weight:700;}
-  .ann p{margin:0;color:var(--text-dim);font-size:14px;}
-
-  footer{padding:36px 0;text-align:center;}
-  .fine{font-family:'Courier Prime';font-size:11px;color:var(--text-dim);}
+  @media print{
+    .topbar,.hero-actions,.toolbar,.done-btn,.progress-actions{display:none!important}
+    body{background:#fff;color:#000}
+    .hero{background:#fff;color:#000;padding:25px 0;border-bottom:2px solid #000}
+    .hero .sub,.hero-desc,.eyebrow,.stat span{color:#222}
+    .stat{border:1px solid #aaa;background:#fff}
+    .progress-shell{position:static;box-shadow:none}
+    .weekcard{break-inside:avoid;box-shadow:none}
+    .weekbody{display:block!important}
+  }
 </style>
 </head>
 <body>
-
 <header class="topbar">
   <div class="wrap">
-    <div class="brand"><span class="mark">CR-115</span><span class="name">社區韌性專題與實務研析</span></div>
-    <nav class="nav">
-      <a href="#schedule">教學進度</a>
-      <a href="#attendance">出勤追蹤</a>
-      <a href="#ann">公告</a>
+    <div class="brand">
+      <div class="brand-mark">EMT-1</div>
+      <div class="brand-text">高階專業人員 × 社區韌性課程導航</div>
+    </div>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="#core">核心教材</a>
+      <a href="#schedule">18週進度</a>
+      <a href="#course">課程資訊</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">National Taipei University of Nursing and Health Sciences · College of Health Technology</p>
-    <h1>社區韌性專題與實務研析</h1>
-    <p class="en mono">Analysis and Practice of Community Resilience · 115學年度第1學期</p>
-    <div class="hero-meta">
-      <span class="tag-chip">學分 <b>3</b></span>
-      <span class="tag-chip">週三 <b>2–4節</b></span>
-      <span class="tag-chip">開課 <b>健康科技學院碩士班</b></span>
-      <span class="tag-chip">授課 <b>張育通 助理教授</b></span>
+    <p class="eyebrow">National Taipei University of Nursing and Health Sciences · 115-1</p>
+    <h1>高階專業人員 EMT-1<br>× 社區韌性</h1>
+    <p class="sub">社區韌性專題與實務研析｜Graduate-level EMT-1 Integrated Course</p>
+    <p class="hero-desc">以臺灣 EMT-1 法定能力與消防署教材為核心，再用 AHA、Ambulance Victoria CPG、Deployed Medicine / TCCC 與國內急救影音做「高階延伸」。每週把教材、指引、影片與進度集中在同一張課程卡，方便老師授課、學生預習與課後複習。</p>
+    <div class="hero-grid">
+      <div class="stat"><b>18 週</b><span>教學進度</span></div>
+      <div class="stat"><b>3 學分</b><span>專業選修</span></div>
+      <div class="stat"><b>54 h</b><span>校內排課時數</span></div>
+      <div class="stat"><b>56 h</b><span>現行 EMT-1 法定訓練總時數</span></div>
     </div>
-    <p class="hero-desc">本課程探討社區韌性體系中「第一反應者」的關鍵角色與實務職能，結合緊急醫療應變科學與社區公共衛生架構，深入研析基本救命術、創傷生理學及大量傷病處置邏輯。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#schedule">查看本週課程 ↓</a>
+      <a class="btn btn-ghost" href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020141" target="_blank" rel="noopener">現行法規 ↗</a>
+    </div>
   </div>
 </section>
 
-<section id="attendance">
+<main>
+<section>
   <div class="wrap">
-    <div class="section-head"><span class="idx mono">01</span><h2>EMT-1 核心課程出勤時數</h2></div>
-    <div class="gauge-card">
-      <div class="gauge-row">
-        <div class="gauge-track"><div class="gauge-fill"></div></div>
+    <div class="section-title"><div class="section-index">!</div><div><h2>先看這個：54 小時不等於 56 小時</h2><p>把「學校課程」與「正式 EMT-1 訓練資格」分開呈現，避免師生誤解。</p></div></div>
+    <div class="notice">
+      <div class="notice-num">54 ≠ 56</div>
+      <div>
+        <h3>本課程以 EMT-1 核心能力對應設計，但不直接宣稱 54 小時即可完成法定 EMT-1 訓練。</h3>
+        <p>現行《救護技術員管理辦法》之初級救護技術員訓練總時數為 56 小時。若本課程要作為正式訓練及發證依據，仍須依主管機關核准之訓練計畫、完整時數、測驗及其他法定要求辦理。<a href="https://www.mohw.gov.tw/dl-88881-b77f85f5-db50-4fe9-b3b5-9d3877bf1d1b.html" target="_blank" rel="noopener">查看修正總說明 ↗</a></p>
       </div>
-      <p class="gauge-note">涉及 EMT-1 核心課程之週次，缺課時數不得超過總時數之 1/10。全學期規劃 54 小時（3小時 × 18週），可容許缺課上限約 5.4 小時。未達標者將無法參加期末術科檢定，亦無法取得受訓證明。</p>
+    </div>
+  </div>
+</section>
+
+<section id="core">
+  <div class="wrap">
+    <div class="section-title"><div class="section-index">01</div><div><h2>四個固定入口｜CORE LIBRARY</h2><p>上課先從臺灣官方教材與法規開始，再進到國際 CPG 與影音延伸。</p></div></div>
+    <div class="core-grid">
+      <article class="core-card">
+        <div class="kicker">TAIWAN · OFFICIAL</div>
+        <h3>2025《救護技術員教科書》</h3>
+        <p>內政部消防署 2025 年新版教材，整合 EMT-1 與 EMT-2，作為本課程每週的主要官方閱讀入口。</p>
+        <div class="links">
+          <a class="link-btn" href="https://ebook.nfa.gov.tw/1140527/" target="_blank" rel="noopener">開啟電子書 ↗</a>
+          <a class="link-btn" href="https://www.nfa.gov.tw/cht/index.php?article_id=18516&code=list&flag=detail&ids=1468" target="_blank" rel="noopener">新版教材說明 ↗</a>
+        </div>
+      </article>
+      <article class="core-card">
+        <div class="kicker">TAIWAN · SKILL MANUAL</div>
+        <h3>2025《教學用緊急醫療救護單項技術操作手冊》</h3>
+        <p>技能站、術科示教與期末 OSCE/技術測驗優先參考；遇到單項技術時可直接回到操作手冊複習。</p>
+        <div class="links">
+          <a class="link-btn" href="https://ebook.nfa.gov.tw/1140526/" target="_blank" rel="noopener">開啟操作手冊 ↗</a>
+          <a class="link-btn" href="https://www.nfa.gov.tw/cht/index.php?article_id=18516&code=list&flag=detail&ids=1468" target="_blank" rel="noopener">消防署說明 ↗</a>
+        </div>
+      </article>
+      <article class="core-card">
+        <div class="kicker">TAIWAN · LAW</div>
+        <h3>《救護技術員管理辦法》＋《緊急醫療救護法》</h3>
+        <p>界定 EMT 訓練、證書、業務範圍與緊急醫療救護體系。法規題、倫理與政策分析週以此為原點。</p>
+        <div class="links">
+          <a class="link-btn" href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020141" target="_blank" rel="noopener">管理辦法 ↗</a>
+          <a class="link-btn" href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020045" target="_blank" rel="noopener">緊急醫療救護法 ↗</a>
+        </div>
+      </article>
+      <article class="core-card">
+        <div class="kicker">INTERNATIONAL · CPG</div>
+        <h3>AHA 2025 + Ambulance Victoria CPG</h3>
+        <p>用於比較 resuscitation science 與院前臨床決策。這些是高階延伸，不取代臺灣法規、消防署教材或地方醫療指導。</p>
+        <div class="links">
+          <a class="link-btn" href="https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines" target="_blank" rel="noopener">AHA 2025 ↗</a>
+          <a class="link-btn" href="https://www.ambulance.vic.gov.au/clinical-practice-guidelines" target="_blank" rel="noopener">AV CPG ↗</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="schedule">
   <div class="wrap">
-    <div class="section-head"><span class="idx mono">02</span><h2>教學進度 · DUTY LOG</h2></div>
+    <div class="section-title"><div class="section-index">02</div><div><h2>18 週教學進度｜DUTY LOG</h2><p>點開每週即可看到官方教材、國際 CPG、影音與高階延伸。字體與操作區均放大，適合教室投影與手機查閱。</p></div></div>
 
-    <div class="legend">
-      <span><i class="dot" style="background:var(--panel-2)"></i>一般講授/討論</span>
-      <span><i class="dot" style="background:var(--crimson-tint)"></i>與出差期間重疊，待確認處理方式</span>
+    <div class="progress-shell">
+      <div class="progress-top"><b id="progressText">本學期完成 0 / 18 週</b><span id="progressPct">0%</span></div>
+      <div class="track"><div class="fill" id="progressFill"></div></div>
+      <div class="progress-actions">
+        <button class="mini-btn" id="expandAll" type="button">全部展開</button>
+        <button class="mini-btn" id="collapseAll" type="button">全部收合</button>
+        <button class="mini-btn" id="resetProgress" type="button">重設本機進度</button>
+        <span class="local-note">✓ 完成狀態只存在目前瀏覽器（localStorage），不收集學生資料。</span>
+      </div>
     </div>
 
-    <table id="scheduleTable">
-      <thead>
-        <tr><th style="width:52px;">週次</th><th style="width:90px;">日期</th><th>課程單元／進度</th><th style="width:70px;">時數</th><th style="width:170px;">備註</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div class="toolbar" aria-label="資源篩選">
+      <button class="filter active" data-filter="all" type="button">全部資源</button>
+      <button class="filter" data-filter="official" type="button">臺灣官方</button>
+      <button class="filter" data-filter="cpg" type="button">國際 CPG</button>
+      <button class="filter" data-filter="video" type="button">影音</button>
+      <button class="filter" data-filter="advanced" type="button">高階／戰術延伸</button>
+    </div>
+
+    <div class="weeklist" id="weekList"></div>
+    <p class="disclaimer">※ AHA、Ambulance Victoria、Deployed Medicine / TCCC 與 YouTube 資源為比較、討論與延伸學習用途；實際救護處置仍應依臺灣現行法規、主管機關公告、消防署教材、所屬機關 SOP 與醫療指導辦理。</p>
+  </div>
+</section>
+
+<section id="course">
+  <div class="wrap">
+    <div class="section-title"><div class="section-index">03</div><div><h2>課程資訊與評量</h2><p>保留正式教學計畫核心資料，但改成快速閱讀版。</p></div></div>
+    <div class="info-grid">
+      <div class="info-card"><h3>課程定位</h3><p>健康科技學院碩士班，115 學年度第 1 學期，3 學分專業選修。週三第 2–4 節 09:10–12:00。</p></div>
+      <div class="info-card"><h3>授課教師</h3><p>張育通｜校內分機 1205<br><a href="mailto:yutung@ntunhs.edu.tw">yutung@ntunhs.edu.tw</a></p></div>
+      <div class="info-card"><h3>實作安全</h3><p>CPR、固定、搬運與情境演練週，應穿著便於活動之長褲與運動鞋；依操作站安全規範執行。</p></div>
+    </div>
+    <div class="grade">
+      <div class="grade-item"><b>20%</b><span>平時表現</span></div>
+      <div class="grade-item"><b>30%</b><span>期中報告</span></div>
+      <div class="grade-item"><b>50%</b><span>期末評量（筆試＋術科）</span></div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-head"><span class="idx mono">03</span><h2>成績評定</h2></div>
-    <div class="grade-bars">
-      <div class="gbar-row"><div class="gbar-label">平時表現</div><div class="gbar-track"><div class="gbar-fill" style="width:20%"></div></div><div class="gbar-pct">20%</div></div>
-      <div class="gbar-row"><div class="gbar-label">期中報告</div><div class="gbar-track"><div class="gbar-fill" style="width:30%"></div></div><div class="gbar-pct">30%</div></div>
-      <div class="gbar-row"><div class="gbar-label">期末評量（筆試+術科）</div><div class="gbar-track"><div class="gbar-fill" style="width:50%"></div></div><div class="gbar-pct">50%</div></div>
-    </div>
+    <div class="source-note"><strong>資料版本：</strong>課程週次依正式教學計畫；臺灣 EMT-1 法規與教材連結依 2026-08 可查版本整理。消防署 2025 新版教材作為主要官方教材，舊版電子書不再列為主教材。國際 CPG 與影音連結建議每學期開課前再做一次版本檢核。</div>
   </div>
 </section>
-
-<section>
-  <div class="wrap">
-    <div class="section-head"><span class="idx mono">04</span><h2>課程資訊</h2></div>
-    <div class="grid2">
-      <div class="card">
-        <h3>專業紀律與安全</h3>
-        <p>實務操作週次（CPR、創傷固定、搬運）須穿著便於活動之長褲與運動鞋，嚴禁於操作區嬉鬧，違反安全規範經勸導不改者，該次成績以零分計。</p>
-      </div>
-      <div class="card">
-        <h3>修課建議</h3>
-        <p>本課程實務比重極高，建議修課同學抱持「專業紀律」與「團隊協作」之態度，適合對緊急醫療、社區防救災實務有熱忱的同學選修。</p>
-      </div>
-      <div class="card">
-        <h3>參考資料</h3>
-        <ul>
-          <li>內政部消防署 (2024)。《初級救護技術員（EMT-1）訓練教材》。最新版。</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>諮詢時間</h3>
-        <p>Office Hour 採預約制，請事先與授課老師聯繫。授課地點依教務處公告。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="ann" style="border-bottom:none;">
-  <div class="wrap">
-    <div class="section-head"><span class="idx mono">05</span><h2>公告</h2></div>
-    <div id="announcements"></div>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="wrap">
-    <span class="fine">國立臺北護理健康大學 · 健康科技學院碩士班 · 115學年度第1學期 · CR-115 / DUTY LOG v1</span>
-  </div>
+  <div class="wrap">國立臺北護理健康大學 · 健康科技學院碩士班 · 115學年度第1學期｜EMT-1 × Community Resilience Course Hub</div>
 </footer>
 
 <script>
+const CORE = {
+  textbook: {type:'official', title:'2025 救護技術員教科書', meta:'內政部消防署｜本課程主要官方教材', url:'https://ebook.nfa.gov.tw/1140527/'},
+  manual: {type:'official', title:'2025 教學用緊急醫療救護單項技術操作手冊', meta:'內政部消防署｜技能示教／術科準備', url:'https://ebook.nfa.gov.tw/1140526/'},
+  emtLaw: {type:'official', title:'救護技術員管理辦法', meta:'全國法規資料庫｜訓練、證書與業務範圍', url:'https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020141'},
+  emsLaw: {type:'official', title:'緊急醫療救護法', meta:'全國法規資料庫｜EMS 體系與制度', url:'https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020045'},
+  aha: {type:'cpg', title:'2025 AHA Guidelines for CPR & ECC', meta:'American Heart Association｜Resuscitation science', url:'https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines'},
+  ahaBLS: {type:'cpg', title:'2025 AHA Adult Basic Life Support', meta:'AHA｜成人 BLS、AED、FBAO', url:'https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support'},
+  ahaEdu: {type:'cpg', title:'2025 AHA Resuscitation Education Science', meta:'AHA｜模擬、團隊、debriefing、rapid-cycle practice', url:'https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/resuscitation-education-science'},
+  av: {type:'cpg', title:'Ambulance Victoria Clinical Practice Guidelines', meta:'AV｜Digital CPG / 2026 版入口；用於比較院前決策', url:'https://www.ambulance.vic.gov.au/clinical-practice-guidelines'},
+  avDigital: {type:'cpg', title:'Ambulance Victoria Digital CPG', meta:'AV｜互動式臨床指引；公開參考', url:'https://cpg.ambulance.vic.gov.au/'},
+  anne: {type:'video', title:'安妮怎麼了？線上急救教育平台', meta:'YouTube｜EMT、院前救護、急救教育影音', url:'https://www.youtube.com/@anneeducation'},
+  anneCpr: {type:'video', title:'成人心肺復甦觀念課程（CPR+AED）', meta:'安妮怎麼了？｜全民學急救 F1-1', url:'https://www.youtube.com/watch?v=ICFco0bAo-U'},
+  deployed: {type:'advanced', title:'Deployed Medicine — TCCC Education Materials', meta:'Defense Health Agency / Joint Trauma System｜戰術創傷延伸', url:'https://deployedmedicine.com/'},
+  cotccc: {type:'advanced', title:'Joint Trauma System — CoTCCC', meta:'官方 TCCC 更新入口；最新教材連至 Deployed Medicine', url:'https://jts.health.mil/index.cfm/committees/cotccc'},
+  nfaTecc: {type:'advanced', title:'消防署：本土化 TECC 教材與訓練', meta:'內政部消防署｜高威脅環境救護延伸', url:'https://www.nfa.gov.tw/cht/index.php?article_id=16346&code=list&flag=detail&ids=1468'},
+  poison: {type:'official', title:'毒藥物防治諮詢中心', meta:'衛福部／臺北榮總｜中毒資訊與諮詢', url:'https://tw-pcc.mohw.gov.tw/'},
+  osh: {type:'official', title:'職業安全衛生法', meta:'全國法規資料庫｜救護現場與工作者安全延伸', url:'https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001'}
+};
+
 const SCHEDULE = [
-  {w:1,  d:'9/9',   t:'緊急應變治理與政策分析', h:3, flag:false},
-  {w:2,  d:'9/16',  t:'災難與急救醫療法專題', h:3, flag:false},
-  {w:3,  d:'9/23',  t:'臨床評估邏輯與生理數據解讀', h:3, flag:false},
-  {w:4,  d:'9/30',  t:'生理監測與診斷決策科學', h:3, flag:false},
-  {w:5,  d:'10/7',  t:'呼吸支持技術與氣道防護研究', h:3, flag:false},
-  {w:6,  d:'10/14', t:'心血管介入與猝死預防科學', h:3, flag:false},
-  {w:7,  d:'10/21', t:'災難與創傷病理生理學研析', h:3, flag:false},
-  {w:8,  d:'10/28', t:'運動生物力學：脊椎與骨骼固定', h:3, flag:false},
-  {w:9,  d:'11/4',  t:'期中報告', h:3, flag:false, note:'報告'},
-  {w:10, d:'11/11', t:'災難時內科急性病患鑑別診斷', h:3, flag:true},
-  {w:11, d:'11/18', t:'環境毒理學與毒物反應處置', h:3, flag:false},
-  {w:12, d:'11/25', t:'災難現場資源配置與管理模型', h:3, flag:false},
-  {w:13, d:'12/2',  t:'安全衛生議題研析', h:3, flag:false},
-  {w:14, d:'12/9',  t:'特殊族群照護與健康不平等研討', h:3, flag:false},
-  {w:15, d:'12/16', t:'數位轉型：急救科技之應用創新', h:3, flag:false},
-  {w:16, d:'12/23', t:'場域模擬：複雜情境行為分析 I', h:3, flag:false},
-  {w:17, d:'12/30', t:'場域模擬：複雜情境行為分析 II', h:3, flag:false},
-  {w:18, d:'1/6',   t:'期末評量', h:3, flag:false, note:'考試'},
+  {w:1,d:'9/9',t:'緊急應變治理與政策分析',ch:'1.1',focus:'從 EMS 系統、救護技術員角色、社區韌性與治理責任切入，建立本學期共同語言。',r:['textbook','emsLaw','emtLaw','anne']},
+  {w:2,d:'9/16',t:'災難與急救醫療法專題',ch:'1.1',focus:'用案例拆解緊急醫療救護法、救護技術員管理辦法、業務範圍與醫療指導界線。',r:['emtLaw','emsLaw','textbook','av']},
+  {w:3,d:'9/23',t:'臨床評估邏輯與生理數據解讀',ch:'1.2 / 3.1 / 3.2',focus:'把「生命徵象」變成臨床判斷：primary survey、病史、趨勢與紅旗，而不只記正常值。',r:['textbook','manual','avDigital','anne']},
+  {w:4,d:'9/30',t:'生理監測與診斷決策科學',ch:'1.2',focus:'從 SpO₂、血糖與心電監測等基礎資料，討論測量限制、前測機率與院前決策。',r:['textbook','manual','avDigital']},
+  {w:5,d:'10/7',t:'呼吸支持技術與氣道防護研究',ch:'2.1 / 4.1',focus:'聚焦基本氣道處置、異物梗塞、氧合與通氣；技術操作回到消防署操作手冊。',r:['textbook','manual','ahaBLS','avDigital','anne']},
+  {w:6,d:'10/14',t:'心血管介入與猝死預防科學',ch:'2.1–2.3',focus:'高品質 CPR、AED、團隊流程與 cardiac arrest system of care；比較臺灣教材與 AHA 2025。',r:['textbook','manual','ahaBLS','anneCpr','avDigital']},
+  {w:7,d:'10/21',t:'災難與創傷病理生理學研析',ch:'4.2 / 6.2',focus:'從出血、休克、胸腹創傷與創傷機轉理解「為什麼這樣做」，再延伸到高威脅環境救護。',r:['textbook','manual','avDigital','nfaTecc','deployed','cotccc']},
+  {w:8,d:'10/28',t:'運動生物力學：脊椎與骨骼固定',ch:'4.3–4.5',focus:'以傷患安全、脊椎動作限制、骨折固定與搬運力學，練習團隊口令和風險控制。',r:['textbook','manual','avDigital','anne','deployed']},
+  {w:9,d:'11/4',t:'災難時內科急性病患鑑別診斷',ch:'3.1 / 6.1',focus:'以呼吸困難、胸痛、意識改變等症候導向，練習非創傷病患的評估與 red flags。',r:['textbook','avDigital','aha','anne']},
+  {w:10,d:'11/11',t:'期中報告',ch:'REPORT',focus:'以系統、政策、臨床或社區韌性議題做 evidence-informed 分析；引用來源請標明版本與適用範圍。',r:['textbook','emtLaw','emsLaw','aha','av']},
+  {w:11,d:'11/18',t:'環境毒理學與毒物反應處置',ch:'1.4 / 6.5',focus:'中毒、環境急症、暴露與個人防護；優先辨識危害與救援者安全，再談病人處置。',r:['textbook','poison','avDigital','manual']},
+  {w:12,d:'11/25',t:'災難現場資源配置與管理模型',ch:'6.4',focus:'大量傷病、檢傷、資源限制與指揮協調；用 MCI 情境練習從個人技能切換到系統思考。',r:['textbook','emsLaw','nfaTecc','deployed','cotccc','anne']},
+  {w:13,d:'12/2',t:'安全衛生議題研析',ch:'1.3 / 6.6',focus:'從感染控制、PPE、暴露風險、暴力／行為急症與團隊安全，建立 responder safety 思維。',r:['textbook','osh','manual','avDigital']},
+  {w:14,d:'12/9',t:'特殊族群照護與健康不平等研討',ch:'6.3',focus:'小兒、孕產婦、高齡者與脆弱族群；討論生理差異、溝通、可近性與健康不平等。',r:['textbook','avDigital','aha','anne']},
+  {w:15,d:'12/16',t:'數位轉型：急救科技之應用創新',ch:'3.3',focus:'從 AED、監測、數位 CPG、遠距與決策支援談科技如何改變救護教育與臨床流程。',r:['textbook','manual','avDigital','aha','deployed']},
+  {w:16,d:'12/23',t:'場域模擬：複雜情境行為分析 I',ch:'5.1–5.2',focus:'以情境模擬整合評估、溝通、領導與技術；導入 structured debriefing 與 deliberate practice。',r:['manual','ahaEdu','textbook','avDigital','deployed']},
+  {w:17,d:'12/30',t:'場域模擬：複雜情境行為分析 II',ch:'5.3 / 5.4 / 6.1 / 6.2',focus:'加入壓力、資源不足與多傷患情境，訓練 team resource management 與動態決策。',r:['manual','textbook','ahaEdu','nfaTecc','deployed','cotccc']},
+  {w:18,d:'1/6',t:'期末評量',ch:'7.1',focus:'筆試＋術科整合評量。術科複習以消防署 2025 操作手冊為主，並回顧本學期 EMT-1 核心能力。',r:['manual','textbook','emtLaw','ahaBLS']}
 ];
 
-const DEMO_ANN = [
-  {date:'2026-09-01', title:'課程網站上線', body:'本學期課程資訊、進度公告與出勤紀錄將統一透過本站發布，請定期查看。'},
-];
+const ICON = {official:'🏛️',cpg:'📚',video:'▶️',advanced:'🧭'};
+const LABEL = {official:'臺灣官方',cpg:'國際 CPG',video:'影音',advanced:'高階延伸'};
+let currentFilter = 'all';
+const storageKey = 'emt1-advanced-course-progress-v1';
+let doneWeeks = new Set(JSON.parse(localStorage.getItem(storageKey) || '[]'));
 
-function renderTable(){
-  const tbody = document.querySelector('#scheduleTable tbody');
-  SCHEDULE.forEach(row=>{
-    const tr = document.createElement('tr');
-    if(row.flag) tr.classList.add('flagged');
-    const badge = row.flag
-      ? `<span class="stampbadge">${row.note}</span>`
-      : `<span class="plainbadge">${row.note || '講授/討論'}</span>`;
-    tr.innerHTML = `<td class="wk">${String(row.w).padStart(2,'0')}</td>
-      <td class="dt">${row.d}</td>
-      <td>${row.t}</td>
-      <td class="mono">${row.h}</td>
-      <td>${badge}</td>`;
-    tbody.appendChild(tr);
+function resourceHTML(key){
+  const r = CORE[key];
+  return `<article class="resource" data-type="${r.type}">
+    <div class="r-ico">${ICON[r.type]}</div>
+    <div><a href="${r.url}" target="_blank" rel="noopener">${r.title} ↗</a><div class="meta">${r.meta}</div><span class="pill ${r.type}">${LABEL[r.type]}</span></div>
+  </article>`;
+}
+
+function renderWeeks(){
+  const list = document.getElementById('weekList');
+  list.innerHTML = SCHEDULE.map(row => `
+    <article class="weekcard ${doneWeeks.has(row.w)?'done':''}" id="week-${row.w}">
+      <div class="weekhead" role="button" tabindex="0" aria-expanded="false" data-week="${row.w}">
+        <div class="wk">W${String(row.w).padStart(2,'0')}</div>
+        <div class="date">${row.d}</div>
+        <div class="wtitle">${row.t}<span class="modules">EMT-1 對應 ${row.ch}</span></div>
+        <button class="done-btn" type="button" data-done="${row.w}">${doneWeeks.has(row.w)?'✓ 已完成':'標記完成'}</button>
+        <div class="caret">›</div>
+      </div>
+      <div class="weekbody">
+        <p class="focus"><strong>本週學習焦點：</strong>${row.focus}</p>
+        <div class="resource-grid">${row.r.map(resourceHTML).join('')}</div>
+      </div>
+    </article>`).join('');
+
+  document.querySelectorAll('.weekhead').forEach(head=>{
+    const toggle = ()=>{
+      const card = head.closest('.weekcard');
+      const open = card.classList.toggle('open');
+      head.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    head.addEventListener('click', e=>{ if(!e.target.closest('.done-btn')) toggle(); });
+    head.addEventListener('keydown', e=>{ if((e.key==='Enter'||e.key===' ') && !e.target.closest('.done-btn')){e.preventDefault();toggle();} });
+  });
+
+  document.querySelectorAll('[data-done]').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      e.stopPropagation();
+      const w = Number(btn.dataset.done);
+      if(doneWeeks.has(w)) doneWeeks.delete(w); else doneWeeks.add(w);
+      localStorage.setItem(storageKey, JSON.stringify([...doneWeeks]));
+      const card = btn.closest('.weekcard');
+      card.classList.toggle('done', doneWeeks.has(w));
+      btn.textContent = doneWeeks.has(w) ? '✓ 已完成' : '標記完成';
+      updateProgress();
+    });
+  });
+  applyFilter();
+  updateProgress();
+}
+
+function updateProgress(){
+  const n = doneWeeks.size;
+  const pct = Math.round(n / SCHEDULE.length * 100);
+  document.getElementById('progressText').textContent = `本學期完成 ${n} / ${SCHEDULE.length} 週`;
+  document.getElementById('progressPct').textContent = `${pct}%`;
+  document.getElementById('progressFill').style.width = `${pct}%`;
+}
+
+function applyFilter(){
+  document.querySelectorAll('.resource').forEach(el=>{
+    el.style.display = (currentFilter === 'all' || el.dataset.type === currentFilter) ? 'flex' : 'none';
   });
 }
 
-function renderAnn(){
-  const wrap = document.getElementById('announcements');
-  DEMO_ANN.forEach(a=>{
-    const div = document.createElement('div');
-    div.className = 'ann';
-    div.innerHTML = `<div class="d">${a.date}</div><h4>${a.title}</h4><p>${a.body}</p>`;
-    wrap.appendChild(div);
+document.querySelectorAll('.filter').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    currentFilter = btn.dataset.filter;
+    document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b===btn));
+    applyFilter();
+    if(currentFilter !== 'all') document.querySelectorAll('.weekcard').forEach(c=>c.classList.add('open'));
   });
-}
+});
 
-renderTable();
-renderAnn();
+document.getElementById('expandAll').addEventListener('click',()=>document.querySelectorAll('.weekcard').forEach(c=>{c.classList.add('open');c.querySelector('.weekhead').setAttribute('aria-expanded','true');}));
+document.getElementById('collapseAll').addEventListener('click',()=>document.querySelectorAll('.weekcard').forEach(c=>{c.classList.remove('open');c.querySelector('.weekhead').setAttribute('aria-expanded','false');}));
+document.getElementById('resetProgress').addEventListener('click',()=>{doneWeeks.clear();localStorage.removeItem(storageKey);renderWeeks();});
+
+renderWeeks();
 </script>
 </body>
 </html>
